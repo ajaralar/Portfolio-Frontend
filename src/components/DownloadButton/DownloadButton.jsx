@@ -1,10 +1,14 @@
 import classes from "./DownloadButton.module.css";
 
-const DownloadButton = () => {
+const DownloadButton = ({ href, children }) => {
   return (
-    <>
-      <div className={classes.button}>Download CV</div>
-    </>
+    <a
+      href={href}
+      className={classes.resumeButton}
+      download="Best-Candidate.pdf"
+    >
+      {children}
+    </a>
   );
 };
 

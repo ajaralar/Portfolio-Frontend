@@ -1,4 +1,22 @@
 header {
+  padding: 0 102px;
   display: flex;
+  align-items: center;
+  gap: 22px;
   background-color: aqua;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 59px;
+  height: 59px;
+  margin-left: auto;
+}
+
+.text {
+  font-family: var(--font-inter);
+  font-weight: 700;
+  font-size: 49px;
 }

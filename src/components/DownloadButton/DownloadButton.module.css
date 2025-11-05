@@ -1,10 +1,17 @@
-.button {
+.resumeButton {
+  height: fit-content;
+
   padding: 8px 16px;
   border-radius: 8px;
+
+  font-family: var(--font-inter);
+  font-weight: 700;
+
   background-color: var(--primary);
   color: var(--neutral-white);
+  text-decoration: none;
 }
 
-.button:hover {
+.resumeButton:hover {
   cursor: pointer;
 }

@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Inter Custom';
+  src: url('/fonts/inter-cyrillic-100-normal.ttf') format('truetype');
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter Custom';
+  src: url('/fonts/inter-cyrillic-700-normal.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+
 :root {
   --primary: #222831;
   --secondary: #3f72af;
@@ -12,5 +26,5 @@
   --code-color-1: #ff70ea;
   --code-color-2: #ebc54b;
 
-  /* --main-font: '' */
+  --font-inter: 'Inter Custom', sans-serif;
 }
