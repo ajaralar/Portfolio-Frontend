@@ -9,6 +9,7 @@ import TechResume from './routes/TechResume/TechResume.jsx'
 import TechConnect from './routes/TechConnect/TechConnect.jsx'
 import TechProjects from './routes/TechProjects/TechProjects.jsx'
 import App from './routes/App.jsx'
+import './styles/global.css'
 
 const router = createBrowserRouter([
   { path: '/', element: <App /> },

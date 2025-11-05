@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #222831;
+  --secondary: #3f72af;
+  --tertiary: #bacae7;
+  --neutral-white: #f9f7f7;
+  --code-color-1: #ff70ea;
+  --code-color-2: #ebc54b;
+
+  /* --main-font: '' */
+}

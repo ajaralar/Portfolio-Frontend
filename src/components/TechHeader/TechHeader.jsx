@@ -1,13 +1,15 @@
-import classes from './TechHeader.module.css'
+import classes from "./TechHeader.module.css";
+import DownloadButton from "../DownloadButton/DownloadButton.jsx";
 
 const TechHeader = () => {
-    return (
-        <>
-            <header>
-                <p>Hello from the Header</p>
-            </header>
-        </>
-    )
-}
+  return (
+    <>
+      <header>
+        <p>AJ</p>
+        <DownloadButton></DownloadButton>
+      </header>
+    </>
+  );
+};
 
-export default TechHeader
+export default TechHeader;
