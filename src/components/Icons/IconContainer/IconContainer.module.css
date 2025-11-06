@@ -1,0 +1,23 @@
+.iconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 20px;
+    right: 0;
+    width: 59px;
+    height: 59px;
+    z-index: 1000;
+
+    opacity: 0;
+    cursor: pointer;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-108px);
+}
