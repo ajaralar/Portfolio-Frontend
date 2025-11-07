@@ -6,6 +6,9 @@ const MenuAnimation = ({ menuState }) => {
     return (
         <div className={menuClasses}>
             <div className={classes.ellipseOne}></div>
+            <div className={classes.ellipseTwo}></div>
+            <div className={classes.ellipseThree}></div>
+            <div className={classes.ellipseFour}></div>
         </div>
     )
 }

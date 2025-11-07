@@ -5,24 +5,92 @@
     width: 100vw;
     height: 100vh;
     z-index: 99;
-
-    /* background-color: var(--primary); */
-    opacity: 0;
-    transform: translateY(-100%);
-    pointer-events: none;
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    /* pointer-events: none; */
 }
 
 .visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
+    /* pointer-events: auto; */
 }
 
 .ellipseOne {
-    width: 200px;
-    height: 100px;
+    position: absolute;
+    top: 100vh;
+    left: 50%;
+    transform: translate(-50%, 0) scale(0.5);
 
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     background-color: var(--primary);
+
+    transition: top 1.5s cubic-bezier(0.2, 0, 0, 1),
+        transform 1.5s cubic-bezier(0.2, 0, 0, 1);
+
+}
+
+.ellipseTwo {
+    position: absolute;
+    top: 50%;
+    right: 100vw;
+    transform: translate(0, -50%) scale(0.5);
+
+
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background-color: var(--primary);
+
+    transition: right 1.5s cubic-bezier(0.2, 0, 0, 1),
+        transform 1.5s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.ellipseThree {
+    position: absolute;
+    bottom: 100vh;
+    left: 50%;
+    transform: translate(-50%, 0) scale(0.5);
+
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: var(--primary);
+
+    transition: bottom 1.5s cubic-bezier(0.2, 0, 0, 1),
+        transform 1.5s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.ellipseFour {
+    position: absolute;
+    top: 50%;
+    left: 100vw;
+    transform: translate(0, -50%) scale(0.5);
+
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: var(--primary);
+
+    transition: left 1.5s cubic-bezier(0.2, 0, 0, 1),
+        transform 1.5s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.visible .ellipseOne {
+    top: 80vh;
+    transform: translate(-50%, 0) scale(4);
+}
+
+.visible .ellipseTwo {
+    right: 90vw;
+    transform: translate(0, -50%) scale(4);
+}
+
+.visible .ellipseThree {
+    bottom: 80vh;
+    transform: translate(-50%, 0) scale(4);
+}
+
+
+.visible .ellipseFour {
+    left: 90vw;
+    transform: translate(0, -50%) scale(4);
 }
