@@ -10,24 +10,27 @@ import IconContainer from '../../components/Icons/IconContainer/IconContainer.js
 const TechLayout = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const onToggleHandler = () => {
+    const handleToggleMenu = () => {
         setIsMenuOpen(prev => !prev);
     }
 
-    const isHamIconVisible = !isMenuOpen;
-    const isClsIconVisible = isMenuOpen;
+    const handleMenuClose = () => {
+        setIsMenuOpen(false);
+    }
 
     return (
         <>
-            <MenuAnimation menuState={isMenuOpen} />
+            <MenuAnimation
+                menuState={isMenuOpen}
+                onClose={handleMenuClose} />
 
             <TechHeader />
 
-            <IconContainer isVisible={isHamIconVisible} onClickHandler={onToggleHandler}>
+            <IconContainer isVisible={!isMenuOpen} onClickHandler={handleToggleMenu}>
                 <HamburgerIcon />
             </IconContainer>
 
-            <IconContainer isVisible={isClsIconVisible} onClickHandler={onToggleHandler}>
+            <IconContainer isVisible={isMenuOpen} onClickHandler={handleToggleMenu}>
                 <CloseIcon />
             </IconContainer>
 

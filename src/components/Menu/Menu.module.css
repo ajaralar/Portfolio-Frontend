@@ -1,0 +1,50 @@
+.menuContainer {
+    /* Container styling */
+    display: flex;
+    flex-direction: column;
+
+    /* Position styling */
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    /* Logical styling */
+    pointer-events: none;
+}
+
+.visible {
+    pointer-events: auto;
+}
+
+.menuLink {
+    /* Text styling */
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: end;
+    line-height: 80%;
+    font-family: var(--font-inter);
+    font-size: 103.25px;
+    font-weight: 700;
+    color: var(--neutral-white);
+
+    /* Animation transition properties */
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-delay: 0s;
+}
+
+.visible .menuLink {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: calc(0.3s + var(--index) * 0.1s);
+}
+
+.menuLink:hover {
+    color: aqua;
+    transform: translateY(-2px) scale(1.05);
+    transition-duration: 0.2s;
+    transition-delay: 0s;
+}

@@ -1,0 +1,32 @@
+import { Link } from 'react-router-dom'
+import classes from './Menu.module.css'
+
+const Menu = ({ isVisible, onClose }) => {
+    const navItems = [
+        { to: '/tech', label: 'Home' },
+        { to: '/tech/about', label: 'About' },
+        { to: '/tech/resume', label: 'Resume' },
+        { to: '/tech/projects', label: 'Projects' },
+        { to: '/tech/connect', label: 'Connect' },
+    ];
+
+    const menuClass = `${classes.menuContainer} ${isVisible ? classes.visible : ''}`
+    return (
+        <nav className={menuClass}>
+            {navItems.map((item, index) => (
+                <Link
+                    key={item.to}
+                    to={item.to}
+                    // Crucial: Pass the index as a CSS Custom Property
+                    style={{ '--index': index }}
+                    className={classes.menuLink}
+                    onClick={onClose}
+                >
+                    {item.label}
+                </Link>
+            ))}
+        </nav>
+    )
+}
+
+export default Menu
