@@ -9,7 +9,7 @@ const TechAbout = () => {
     return (
         <>
             <main>
-                <section className={classes.section}>
+                <section className={classes.aboutSection}>
                     <h1 className={classes.title}>{data.title1}</h1>
                     <p className={classes.body}>{data.body1}</p>
                     <br />
@@ -18,9 +18,9 @@ const TechAbout = () => {
                     <p className={classes.body}>{data.body3}</p>
                 </section>
 
-                <section className={classes.section}>
+                <section className={classes.purposeSection}>
                     <h1 className={classes.title}>{data.title2}</h1>
-                    <div className="cardContainer">
+                    <div className={classes.cardContainer}>
                         {cards.map((card, index) => (
                             <PurposeCard
                                 key={index}
