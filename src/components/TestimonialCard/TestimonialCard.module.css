@@ -1,0 +1,49 @@
+.mainCont {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: var(--neutral-white);
+    padding-left: 10px;
+    width: 584px;
+}
+
+.titleContainer {
+    position: absolute;
+    top: -35px;
+
+    display: flex;
+    gap: 9px;
+    flex-direction: row;
+    align-items: end;
+}
+
+.image {
+    background-color: aqua;
+    width: 50px;
+    height: 50px;
+}
+
+.name {
+    font-family: var(--font-inter);
+    font-weight: 700;
+    font-size: 21.33px;
+}
+
+.bodyContainer {
+    position: relative;
+    height: 80px;
+    overflow: hidden;
+}
+
+.body {
+    padding-top: 25px;
+    font-family: var(--font-inter);
+    font-size: 17.07px
+}
+
+.readMore {
+    position: absolute;
+    font-family: var(--font-inter);
+    font-size: 17.07px;
+    bottom: 0;
+}

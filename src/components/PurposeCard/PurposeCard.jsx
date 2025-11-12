@@ -11,7 +11,7 @@ const PurposeCard = ({ title, icon, body }) => {
     }
 
     return (
-        <div className={classes.card}>
+        <div className={classes.mainCont}>
             <div className={classes.icon}>
                 <DynamicIcon></DynamicIcon>
             </div>

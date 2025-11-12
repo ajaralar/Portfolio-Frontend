@@ -1,38 +1,50 @@
 import { useLoaderData } from 'react-router-dom'
 import classes from './TechAbout.module.css'
+import Section from '../../components/Section/Section';
+import Card from '../../components/Card/Card';
 import PurposeCard from '../../components/PurposeCard/PurposeCard';
+import TestimonialCard from '../../components/TestimonialCard/TestimonialCard';
 
 const TechAbout = () => {
     const data = useLoaderData();
-    const cards = data.purpCards
+    const purpCards = data.purpCards
+    const testCards = data.testCards
 
     return (
-        <>
-            <main>
-                <section className={classes.aboutSection}>
-                    <h1 className={classes.title}>{data.title1}</h1>
-                    <p className={classes.body}>{data.body1}</p>
-                    <br />
-                    <p className={classes.body}>{data.body2}</p>
-                    <br />
-                    <p className={classes.body}>{data.body3}</p>
-                </section>
+        <main>
+            <Section
+                title={data.aboutTitle}
+                body={data.aboutBody}>
+            </Section>
 
-                <section className={classes.purposeSection}>
-                    <h1 className={classes.title}>{data.title2}</h1>
-                    <div className={classes.cardContainer}>
-                        {cards.map((card, index) => (
+            <Section title={data.purpTitle}>
+                <div className={classes.purpCardContainer}>
+                    {purpCards?.map((card, index) => (
+                        <Card key={index}>
                             <PurposeCard
-                                key={index}
+
                                 title={card.title}
                                 icon={card.icon}
-                                body={card.description}
+                                body={card.description} />
+                        </Card>
+                    ))}
+                </div>
+            </Section>
+
+            <Section title={data.testTitle}>
+                <div className={classes.testCardContainer}>
+                    {testCards.map((card, index) => (
+                        <Card key={index}>
+                            <TestimonialCard
+                                name={card.name}
+                                position={card.position}
+                                body={card.body}
                             />
-                        ))}
-                    </div>
-                </section>
-            </main>
-        </>
+                        </Card>
+                    ))}
+                </div>
+            </Section>
+        </main>
     )
 }
 

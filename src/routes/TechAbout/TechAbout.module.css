@@ -4,38 +4,16 @@ main {
     width: 100vw;
 }
 
-.aboutSection {
-    display: flex;
-    flex-direction: column;
-
-    margin: 100px auto 0 auto;
-    width: 888px;
-    height: 333px;
-}
-
-.title {
-    text-align: center;
-    font-size: 87px;
-    font-family: var(--font-inter);
-}
-
-.body {
-    text-align: center;
-    font-size: 20px;
-    font-family: var(--font-inter);
-}
-
-.purposeSection {
-    display: flex;
-    flex-direction: column;
-
-    margin: 50px auto 0 auto;
-}
-
-.cardContainer {
+.purpCardContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    width: 956px;
     gap: 22px;
+}
+
+.testCardContainer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 53px;
+    gap: 37px;
 }
