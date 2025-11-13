@@ -5,11 +5,12 @@
     color: var(--neutral-white);
     padding-left: 10px;
     width: 584px;
+    cursor: pointer;
 }
 
 .titleContainer {
     position: absolute;
-    top: -35px;
+    top: -70px;
 
     display: flex;
     gap: 9px;
@@ -18,9 +19,12 @@
 }
 
 .image {
-    background-color: aqua;
-    width: 50px;
-    height: 50px;
+    display: flex;
+    background-color: var(--primary);
+    border-radius: 10px;
+    padding: 10px;
+    width: 88px;
+    height: 88px;
 }
 
 .name {
@@ -31,19 +35,42 @@
 
 .bodyContainer {
     position: relative;
-    height: 80px;
     overflow: hidden;
+    transition: 500ms;
 }
 
 .body {
     padding-top: 25px;
     font-family: var(--font-inter);
-    font-size: 17.07px
+    font-size: 17.07px;
 }
 
 .readMore {
     position: absolute;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    align-items: flex-end;
+    justify-content: flex-start;
+
     font-family: var(--font-inter);
     font-size: 17.07px;
+    color: rgb(0, 170, 255);
+
     bottom: 0;
+    background-image: linear-gradient(0, var(--primary), rgba(0, 255, 255, 0))
+}
+
+.alignRight .body {
+    text-align: end;
+}
+
+.alignRight .readMore {
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.alignRight .titleContainer {
+    right: 0;
+    flex-direction: row-reverse;
 }

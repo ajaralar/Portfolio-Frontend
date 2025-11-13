@@ -33,15 +33,19 @@ const TechAbout = () => {
 
             <Section title={data.testTitle}>
                 <div className={classes.testCardContainer}>
-                    {testCards.map((card, index) => (
-                        <Card key={index}>
-                            <TestimonialCard
-                                name={card.name}
-                                position={card.position}
-                                body={card.body}
-                            />
-                        </Card>
-                    ))}
+                    {testCards.map((card, index) => {
+                        return (
+                            <Card index={index} key={index}>
+                                <TestimonialCard
+                                    name={card.name}
+                                    position={card.position}
+                                    body={card.body}
+                                    imageSrc={card.imageSrc}
+                                    index={index}
+                                />
+                            </Card>
+                        )
+                    })}
                 </div>
             </Section>
         </main>
