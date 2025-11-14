@@ -25,6 +25,10 @@
     padding: 10px;
     width: 88px;
     height: 88px;
+
+    box-shadow:
+        0 3px 6px 0 rgba(0, 0, 0, 0.401),
+        0 2px 2px 0 rgba(0, 0, 0, 0.171);
 }
 
 .name {
