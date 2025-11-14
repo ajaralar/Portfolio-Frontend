@@ -8,7 +8,7 @@ export const aboutLoader = async () => {
         }
         return response.json()
     } catch (error) {
-        console.error('Loader Error', error);
+        console.error('About Loader Error', error);
         throw error
     }
 }
@@ -21,7 +21,7 @@ export const resumeLoader = async () => {
         }
         return response.json()
     } catch (error) {
-        console.error('Loader Error', error)
+        console.error('Resume Loader Error', error)
         throw error
     }
 }
@@ -34,7 +34,7 @@ export const connectLoader = async () => {
         }
         return response.json()
     } catch (error) {
-        console.error('Loader Error', error)
+        console.error('Connect Loader Error', error)
         throw error
     }
 }
@@ -47,7 +47,20 @@ export const projectsLoader = async () => {
         }
         return response.json()
     } catch (error) {
-        console.error('Loader Error', error)
+        console.error('Projects Loader Error', error)
+        throw error
+    }
+}
+
+export const footerLoader = async () => {
+    try {
+        const response = await fetch(`${URL}/footer`)
+        if (!response.ok) {
+            throw new Response('Failed to fetch Footer data', { status: response.status })
+        }
+        return response.json()
+    } catch (error) {
+        console.error('Footer Loader Error', error)
         throw error
     }
 }

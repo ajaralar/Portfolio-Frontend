@@ -6,18 +6,18 @@ import PurposeCard from '../../components/PurposeCard/PurposeCard';
 import TestimonialCard from '../../components/TestimonialCard/TestimonialCard';
 
 const TechAbout = () => {
-    const data = useLoaderData();
-    const purpCards = data.purpCards
-    const testCards = data.testCards
+    const aboutData = useLoaderData();
+    const purpCards = aboutData.purpCards
+    const testCards = aboutData.testCards
 
     return (
         <main>
             <Section
-                title={data.aboutTitle}
-                body={data.aboutBody}>
+                title={aboutData.aboutTitle}
+                body={aboutData.aboutBody}>
             </Section>
 
-            <Section title={data.purpTitle}>
+            <Section title={aboutData.purpTitle}>
                 <div className={classes.purpCardContainer}>
                     {purpCards?.map((card, index) => (
                         <Card key={index}>
@@ -31,7 +31,7 @@ const TechAbout = () => {
                 </div>
             </Section>
 
-            <Section title={data.testTitle}>
+            <Section title={aboutData.testTitle}>
                 <div className={classes.testCardContainer}>
                     {testCards.map((card, index) => {
                         return (

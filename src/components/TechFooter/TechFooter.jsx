@@ -1,10 +1,10 @@
 import classes from "./TechFooter.module.css";
 
-const TechFooter = () => {
+const TechFooter = ({ footerData }) => {
   return (
     <>
       <footer>
-        <p>Hello from The Footer</p>s
+        {footerData.copyright}
       </footer>
     </>
   );

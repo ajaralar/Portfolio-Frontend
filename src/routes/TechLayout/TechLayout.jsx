@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLoaderData } from 'react-router-dom'
 import { useState } from 'react'
 import TechHeader from "../../components/TechHeader/TechHeader"
 import TechFooter from '../../components/TechFooter/TechFooter'
@@ -9,6 +9,7 @@ import IconContainer from '../../components/Icons/IconContainer/IconContainer.js
 
 const TechLayout = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const footerData = useLoaderData()
 
     const handleToggleMenu = () => {
         setIsMenuOpen(prev => !prev);
@@ -36,7 +37,7 @@ const TechLayout = () => {
 
             <Outlet />
 
-            <TechFooter />
+            <TechFooter footerData={footerData} />
         </>
     )
 }

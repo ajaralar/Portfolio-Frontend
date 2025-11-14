@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import { aboutLoader, resumeLoader, connectLoader, projectsLoader } from './api/techLoaders.js'
+import { aboutLoader, resumeLoader, connectLoader, projectsLoader, footerLoader } from './api/techLoaders.js'
 import TechLayout from './routes/TechLayout/TechLayout.jsx'
 import TechHome from './routes/TechHome/TechHome.jsx'
 import TechAbout from './routes/TechAbout/TechAbout.jsx'
@@ -14,7 +14,7 @@ import './styles/global.css'
 const router = createBrowserRouter([
   { path: '/', element: <App /> },
   {
-    path: '/tech', element: <TechLayout />, children: [
+    path: '/tech', element: <TechLayout />, loader: footerLoader, children: [
       { index: true, element: <TechHome /> },
       { path: 'about', loader: aboutLoader, element: <TechAbout /> },
       { path: 'resume', loader: resumeLoader, element: <TechResume /> },
