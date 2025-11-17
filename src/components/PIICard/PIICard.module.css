@@ -1,0 +1,37 @@
+.piiCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.pii {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+}
+
+.image {
+    background-color: var(--neutral-white);
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.typedText {
+    padding-right: 2px;
+    border-right: 1px solid;
+    animation: border-blink 1s infinite;
+}
+
+@keyframes border-blink {
+
+    0%,
+    100% {
+        border-color: var(--neutral-white);
+    }
+
+    50% {
+        border-color: transparent;
+    }
+}
