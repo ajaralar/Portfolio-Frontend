@@ -1,9 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 @font-face {
   font-family: 'Inter Custom';
   src: url('/fonts/inter-cyrillic-100-normal.ttf') format('truetype');
@@ -23,8 +17,23 @@
   --secondary: #3f72af;
   --tertiary: #bacae7;
   --neutral-white: #f9f7f7;
+  --neutral-black: #111111;
   --code-color-1: #ff70ea;
   --code-color-2: #ebc54b;
 
   --font-inter: 'Inter Custom', 'Inter';
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--neutral-white);
+  font-family: var(--font-inter);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
 }

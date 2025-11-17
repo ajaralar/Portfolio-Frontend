@@ -23,10 +23,8 @@
     text-transform: uppercase;
     text-align: end;
     line-height: 80%;
-    font-family: var(--font-inter);
     font-size: 103.25px;
     font-weight: 700;
-    color: var(--neutral-white);
 
     /* Animation transition properties */
     opacity: 0;
