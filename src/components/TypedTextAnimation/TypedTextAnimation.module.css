@@ -1,0 +1,17 @@
+.typedText {
+    padding-right: 2px;
+    border-right: 1px solid;
+    animation: border-blink 1s infinite;
+}
+
+@keyframes border-blink {
+
+    0%,
+    100% {
+        border-color: var(--neutral-white);
+    }
+
+    50% {
+        border-color: transparent;
+    }
+}
