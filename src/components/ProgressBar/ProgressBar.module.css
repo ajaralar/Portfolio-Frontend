@@ -1,0 +1,28 @@
+.mainContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.head {
+    display: flex;
+    gap: 8px;
+
+    font-size: clamp(13px, 1vw, 24px);
+    font-weight: 700;
+}
+
+.bar {
+    width: 100%;
+    height: 10px;
+    border-radius: 68px;
+    background-color: var(--neutral-white);
+}
+
+.progress {
+    width: 100%;
+    height: 10px;
+    border-radius: 68px;
+    background-color: var(--secondary);
+}

@@ -1,10 +1,13 @@
 .resumeContainer {
     display: flex;
+    width: 100vw;
+    margin: 102px;
 }
 
 .sectionOne {
     display: flex;
     flex-direction: column;
     background-color: aqua;
-    max-width: 345px;
+    width: 20%;
+    gap: 24px;
 }

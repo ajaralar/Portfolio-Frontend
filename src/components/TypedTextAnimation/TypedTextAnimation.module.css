@@ -2,6 +2,7 @@
     padding-right: 2px;
     border-right: 1px solid;
     animation: border-blink 1s infinite;
+    height: 20px;
 }
 
 @keyframes border-blink {

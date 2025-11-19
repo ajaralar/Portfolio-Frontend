@@ -1,0 +1,6 @@
+.mainContainer {
+    gap: 17px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}

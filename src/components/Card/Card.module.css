@@ -22,3 +22,7 @@
     margin-right: auto;
     margin-left: 0;
 }
+
+.fullSize {
+    width: 100%;
+}
