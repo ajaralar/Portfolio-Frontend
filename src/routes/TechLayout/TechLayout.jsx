@@ -5,7 +5,7 @@ import TechFooter from '../../components/TechFooter/TechFooter'
 import MenuAnimation from '../../components/MenuAnimation/MenuAnimation'
 import HamburgerIcon from "../../components/Icons/HamburgerIcon/HamburgerIcon.jsx"
 import CloseIcon from '../../components/Icons/CloseIcon/CloseIcon.jsx'
-import IconContainer from '../../components/Icons/IconContainer/IconContainer.jsx'
+import IconContainer from '../../components/IconContainer/IconContainer.jsx'
 
 const TechLayout = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
