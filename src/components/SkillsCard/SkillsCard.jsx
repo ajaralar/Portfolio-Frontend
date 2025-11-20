@@ -1,6 +1,7 @@
+import classes from './SkillsCard.module.css'
 import Card from '../Card/Card'
 import ProgressBar from '../ProgressBar/ProgressBar'
-import classes from './SkillsCard.module.css'
+import IconCarousel from '../IconCarousel/IconCarousel'
 
 const SkillsCard = ({ data }) => {
     return (
@@ -12,6 +13,8 @@ const SkillsCard = ({ data }) => {
                         name={item.name}
                         progress={item.progress} />
                 ))}
+
+                <IconCarousel icons={data.techs} />
             </div>
         </Card>
     )
