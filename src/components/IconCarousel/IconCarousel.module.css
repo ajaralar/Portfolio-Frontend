@@ -1,0 +1,25 @@
+.carousel {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.group {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: scroll-loop 5s linear infinite;
+}
+
+.group:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-loop {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-33.33%);
+    }
+}

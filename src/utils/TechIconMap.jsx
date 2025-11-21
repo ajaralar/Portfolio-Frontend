@@ -5,5 +5,5 @@ import JavaScriptIcon from '../components/Icons/JavaScriptIcon/JavaScriptIcon'
 export const TechIconMap = {
     html: HtmlIcon,
     css: CssIcon,
-    javascript: JavaScriptIcon,
+    javaScript: JavaScriptIcon,
 }
