@@ -8,7 +8,9 @@ const IconCarousel = ({ icons }) => {
             const Icon = TechIconMap[item.icon]
 
             return (
-                <Icon key={index}></Icon>
+                <div key={index} className={classes.container}>
+                    <Icon />
+                </div>
             )
         })
     }
@@ -16,7 +18,6 @@ const IconCarousel = ({ icons }) => {
     return (
         <div className={classes.carousel}>
             <div className={classes.group}>
-                <RenderIcons />
                 <RenderIcons />
                 <RenderIcons />
             </div>

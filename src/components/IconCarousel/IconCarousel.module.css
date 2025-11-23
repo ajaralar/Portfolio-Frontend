@@ -2,16 +2,30 @@
     display: flex;
     width: 100%;
     overflow: hidden;
+    padding: 7px;
 }
 
 .group {
     display: flex;
     flex-wrap: nowrap;
-    animation: scroll-loop 5s linear infinite;
+    animation: scroll-loop 15s linear infinite;
 }
 
 .group:hover {
     animation-play-state: paused;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    transition: 300ms;
+}
+
+.container:hover {
+    cursor: pointer;
+    transform: scale(1.2);
 }
 
 @keyframes scroll-loop {
@@ -20,6 +34,6 @@
     }
 
     100% {
-        transform: translateX(-33.33%);
+        transform: translateX(-50%);
     }
 }
