@@ -21,4 +21,3 @@ const TechResume = () => {
 }
 
 export default TechResume
-

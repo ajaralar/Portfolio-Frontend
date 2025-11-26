@@ -1,0 +1,69 @@
+.mainContainer {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    background-color: aqua;
+}
+
+.staggered {
+    flex-direction: row-reverse;
+}
+
+.computer,
+.code {
+    background-color: black;
+    margin: 10px;
+    width: 50%;
+}
+
+.code {
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: #424242;
+}
+
+.projectHeader {
+    font-size: 17px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    gap: 13px;
+}
+
+.macGUI {
+    display: flex;
+    gap: 3px;
+}
+
+.ellipse:nth-child(1) {
+    background-color: #FF605C;
+}
+
+.ellipse:nth-child(2) {
+    background-color: #FFBD44;
+}
+
+.ellipse:nth-child(3) {
+    background-color: #00CA4E;
+}
+
+.ellipse {
+    background-color: aqua;
+    border-radius: 100%;
+    height: 13px;
+    aspect-ratio: 1;
+}
+
+.line {
+    height: 1px;
+    background-color: var(--neutral-white);
+}
+
+.pink {
+    color: #FF70EA;
+}
+
+.container {
+    padding-left: 60px;
+}

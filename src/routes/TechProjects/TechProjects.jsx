@@ -1,11 +1,16 @@
 import { useLoaderData } from 'react-router-dom'
+import Section from '../../components/Section/Section'
+import Project from '../../components/Project/Project'
 
 const TechProjects = () => {
     const data = useLoaderData()
     return (
         <>
-            <p>Hello from Projects page</p>
-            <p>Status: {data.message}</p>
+            <Section title={data.sectionTitle} body={data.sectionBody} />
+
+            {data.projects.map((projectData, index) => (
+                <Project data={projectData} index={index} key={index} />
+            ))}
         </>
     )
 }
