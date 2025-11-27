@@ -1,4 +1,4 @@
-import classes from './index.module.css'
+import classes from './Resume.module.css'
 import BulletList from './BulletList'
 
 const ItemContent = ({ item, header }) => {

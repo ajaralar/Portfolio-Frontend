@@ -2,7 +2,7 @@ import { useLoaderData } from 'react-router-dom'
 import classes from './TechResume.module.css'
 import PIICard from '../../components/PIICard/PIICard'
 import SkillsCard from '../../components/SkillsCard/SkillsCard'
-import ResumeCard from '../../components/ResumeCard/ResumeCard'
+import ResumeCard from '../../components/Resume/ResumeCard'
 
 const TechResume = () => {
     const data = useLoaderData()

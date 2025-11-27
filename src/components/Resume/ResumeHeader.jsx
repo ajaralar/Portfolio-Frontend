@@ -1,5 +1,5 @@
 import { ResumeIconMap } from '../../utils/ResumeIconMap'
-import classes from './index.module.css'
+import classes from './Resume.module.css'
 
 const ResumeHeader = ({ collection }) => {
 
