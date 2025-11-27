@@ -1,10 +1,8 @@
 import classes from './Project.module.css'
+import ProjectHeader from './ProjectHeader';
+import ProjectDetails from './ProjectDetails';
 
 const Project = ({ data, index }) => {
-    const braceStringStart = '{';
-    const braceStringEnd = '}';
-    const bracketStringStart = '[';
-    const bracketStringEnd = ']';
     const layoutClass = index % 2 ? classes.staggered : ''
 
     return (
@@ -15,38 +13,8 @@ const Project = ({ data, index }) => {
             </div>
 
             <div className={classes.code}>
-                <div className={classes.projectHeader}>
-                    <div className={classes.macGUI}>
-                        <div className={classes.ellipse}></div>
-                        <div className={classes.ellipse}></div>
-                        <div className={classes.ellipse}></div>
-                    </div>
-
-                    <div className={classes.projectTitle}>{data.title}</div>
-                </div>
-
-                <div className={classes.line}></div>
-
-                <div className={classes.codeContainer}>
-                    <p>
-                        <span className={classes.pink}>const </span>
-                        project
-                        <span className={classes.pink}> = </span>
-                        {braceStringStart}
-                    </p>
-
-                    <div className={classes.container}>
-                        <p>name: '{data.shortTitle}'</p>
-                        <p>tools:
-                            {bracketStringStart}
-                            {data.tools.map((item, index) => (
-                                `'${item}'`
-                            ))}
-                            {bracketStringEnd}
-                        </p>
-
-                    </div>
-                </div>
+                <ProjectHeader data={data} />
+                <ProjectDetails data={data} />
             </div>
 
         </div>
