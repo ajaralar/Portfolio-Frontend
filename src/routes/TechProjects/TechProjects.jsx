@@ -6,7 +6,10 @@ const TechProjects = () => {
     const data = useLoaderData()
     return (
         <>
-            <Section title={data.sectionTitle} body={data.sectionBody} />
+            <Section
+                title={data.sectionTitle}
+                body={data.sectionBody}
+                width={710} />
 
             {data.projects.map((projectData, index) => (
                 <Project data={projectData} index={index} key={index} />
