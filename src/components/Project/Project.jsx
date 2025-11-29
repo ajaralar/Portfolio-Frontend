@@ -1,4 +1,5 @@
 import classes from './Project.module.css'
+import ProjectView from './ProjectView';
 import ProjectHeader from './ProjectHeader';
 import ProjectDetails from './ProjectDetails';
 
@@ -8,9 +9,7 @@ const Project = ({ data, index }) => {
     return (
         <div className={`${classes.mainContainer} ${layoutClass}`}>
 
-            <div className={classes.computer}>
-                Computer
-            </div>
+            <ProjectView />
 
             <div className={classes.code}>
                 <ProjectHeader data={data} />

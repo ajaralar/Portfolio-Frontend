@@ -1,7 +1,7 @@
 .mainContainer {
     display: flex;
     width: 80%;
-    margin: 0 auto;
+    margin: 100px auto;
     background-color: aqua;
 }
 
@@ -9,9 +9,8 @@
     flex-direction: row-reverse;
 }
 
-.computer,
+.mockupContainer,
 .code {
-    background-color: black;
     margin: 10px;
     width: 50%;
 }
@@ -75,3 +74,50 @@
 .gray {
     color: #838383;
 }
+
+/* Computer css */
+.mockupContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.monitorFrame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /* outline: 2px solid var(--neutral-white); */
+    border: 17px solid var(--neutral-black);
+    border-radius: 10px;
+}
+
+.monitorStand {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.standNeck {
+    width: 50%;
+    height: 60px;
+    background-color: gray;
+    clip-path: polygon(0% 0%,
+            33.33% 0%,
+            33.33% 40%,
+            33.33% 50%,
+            66.66% 50%,
+            66.66% 0,
+            100% 0,
+            100% 100%,
+            0% 100%,
+            0% 0%);
+}
+
+/* .standBase {
+    width: 100%;
+    height: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+} */
