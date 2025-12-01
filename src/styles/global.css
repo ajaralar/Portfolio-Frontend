@@ -12,6 +12,12 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('/fonts/Inconsolata-Regular.woff2') format('woff2');
+}
+
+
 :root {
   --primary: #222831;
   --secondary: #3f72af;
@@ -22,12 +28,16 @@
   --code-color-2: #ebc54b;
 
   --font-inter: 'Inter Custom', 'Inter';
+  --font-code: 'Inconsolata';
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
   color: var(--neutral-white);
   font-family: var(--font-inter);
 }
