@@ -9,7 +9,7 @@ const Project = ({ data, index }) => {
     return (
         <div className={`${classes.mainContainer} ${layoutClass}`}>
 
-            <ProjectView />
+            <ProjectView data={data} />
 
             <div className={classes.code}>
                 <ProjectHeader data={data} />

@@ -1,12 +1,10 @@
 import classes from './Project.module.css'
 
-const ProjectView = () => {
+const ProjectView = ({ data }) => {
     return (
         <div className={classes.mockupContainer}>
             <div className={classes.monitorFrame}>
-                <div className={classes.monitorScreen}>
-                    {/* <ProjectDisplay/> */}
-                </div>
+                <img src={data.imageSrc} alt={data.title} />
             </div>
 
             {/* <div className={classes.monitorStand}>

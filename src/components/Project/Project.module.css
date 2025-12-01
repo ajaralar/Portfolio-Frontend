@@ -21,8 +21,12 @@
     background-color: #424242;
 }
 
+.codeContainer {
+    font-size: 20px;
+}
+
 .projectHeader {
-    font-size: 17px;
+    font-size: 22px;
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -56,6 +60,7 @@
 
 .line {
     height: 1px;
+    margin-bottom: 10px;
     background-color: var(--neutral-white);
 }
 
@@ -86,9 +91,13 @@
 .monitorFrame {
     width: 100%;
     aspect-ratio: 16 / 9;
-    /* outline: 2px solid var(--neutral-white); */
     border: 17px solid var(--neutral-black);
     border-radius: 10px;
+}
+
+.monitorFrame img {
+    width: 100%;
+    height: 100%;
 }
 
 .monitorStand {
