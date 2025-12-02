@@ -17,7 +17,6 @@ const Menu = ({ isVisible, onClose }) => {
                 <Link
                     key={item.to}
                     to={item.to}
-                    // Crucial: Pass the index as a CSS Custom Property
                     style={{ '--index': index }}
                     className={classes.menuLink}
                     onClick={onClose}

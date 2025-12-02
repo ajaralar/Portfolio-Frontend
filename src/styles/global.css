@@ -42,6 +42,11 @@ body {
   font-family: var(--font-inter);
 }
 
+a {
+  text-decoration: none;
+  color: var(--neutral-white);
+}
+
 main {
   display: flex;
   flex-direction: column;
