@@ -1,8 +1,8 @@
-const URL = 'http://localhost:3000/tech'
+const BACK_DOMAIN = import.meta.env.VITE_BACK_DOMAIN;
 
 export const aboutLoader = async () => {
     try {
-        const response = await fetch(`${URL}/about`)
+        const response = await fetch(`${BACK_DOMAIN}/tech/about`)
         if (!response.ok) {
             throw new Response('Failed to fetch About data', { status: response.status })
         }
@@ -15,7 +15,7 @@ export const aboutLoader = async () => {
 
 export const resumeLoader = async () => {
     try {
-        const response = await fetch(`${URL}/resume`)
+        const response = await fetch(`${BACK_DOMAIN}/tech/resume`)
         if (!response.ok) {
             throw new Response('Failed to fetch Resume data', { status: response.status })
         }
@@ -28,7 +28,7 @@ export const resumeLoader = async () => {
 
 export const connectLoader = async () => {
     try {
-        const response = await fetch(`${URL}/connect`)
+        const response = await fetch(`${BACK_DOMAIN}/tech/connect`)
         if (!response.ok) {
             throw new Response('Failed to fetch Connect data', { status: response.status })
         }
@@ -41,7 +41,7 @@ export const connectLoader = async () => {
 
 export const projectsLoader = async () => {
     try {
-        const response = await fetch(`${URL}/projects`)
+        const response = await fetch(`${BACK_DOMAIN}/tech/projects`)
         if (!response.ok) {
             throw new Response('Failed to fetch Projects data', { status: response.status })
         }
@@ -54,7 +54,7 @@ export const projectsLoader = async () => {
 
 export const footerLoader = async () => {
     try {
-        const response = await fetch(`${URL}/footer`)
+        const response = await fetch(`${BACK_DOMAIN}/tech/footer`)
         if (!response.ok) {
             throw new Response('Failed to fetch Footer data', { status: response.status })
         }
