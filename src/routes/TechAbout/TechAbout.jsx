@@ -1,51 +1,50 @@
 import { useLoaderData } from 'react-router-dom'
 import classes from './TechAbout.module.css'
 import Section from '../../components/Section/Section';
-import Card from '../../components/Card/Card';
-import PurposeCard from '../../components/PurposeCard/PurposeCard';
-import TestimonialCard from '../../components/TestimonialCard/TestimonialCard';
+import PurposeCard from '../../components/Card/PurposeCard';
+import TestimonialCard from '../../components/Card/TestimonialCard';
 
 const TechAbout = () => {
-    const aboutData = useLoaderData();
-    const purpCards = aboutData.purpCards
-    const testCards = aboutData.testCards
+    const {
+        aboutTitle,
+        aboutBody,
+        purpTitle,
+        purpCards,
+        testTitle,
+        testCards
+    } = useLoaderData()
 
     return (
         <main>
-            <Section
-                title={aboutData.aboutTitle}
-                body={aboutData.aboutBody}>
-            </Section>
+            {/* About me section */}
+            <Section title={aboutTitle} body={aboutBody} />
 
-            <Section title={aboutData.purpTitle}>
+            {/* Purpose Section */}
+            <Section title={purpTitle}>
                 <div className={classes.purpCardContainer}>
                     {purpCards?.map((card, index) => (
-                        <Card key={index}>
-                            <PurposeCard
-
-                                title={card.title}
-                                icon={card.icon}
-                                body={card.description} />
-                        </Card>
+                        <PurposeCard
+                            key={index}
+                            title={card.title}
+                            icon={card.icon}
+                            body={card.description} />
                     ))}
                 </div>
             </Section>
 
-            <Section title={aboutData.testTitle}>
+            {/* Testiomonial Section */}
+            <Section title={testTitle}>
                 <div className={classes.testCardContainer}>
-                    {testCards.map((card, index) => {
-                        return (
-                            <Card index={index} key={index}>
-                                <TestimonialCard
-                                    name={card.name}
-                                    position={card.position}
-                                    body={card.body}
-                                    imageSrc={card.imageSrc}
-                                    index={index}
-                                />
-                            </Card>
-                        )
-                    })}
+                    {testCards.map((card, index) => (
+                        <TestimonialCard
+                            key={index}
+                            index={index}
+                            name={card.name}
+                            position={card.position}
+                            body={card.body}
+                            imageSrc={card.imageSrc}
+                        />
+                    ))}
                 </div>
             </Section>
         </main>

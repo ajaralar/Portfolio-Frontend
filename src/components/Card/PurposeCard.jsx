@@ -1,5 +1,6 @@
-import classes from './PurposeCard.module.css'
 import { IconMap } from '../../utils/IconMap';
+import classes from './PurposeCard.module.css'
+import Card from './Card';
 
 const PurposeCard = ({ title, icon, body }) => {
 
@@ -11,7 +12,7 @@ const PurposeCard = ({ title, icon, body }) => {
     }
 
     return (
-        <div className={classes.mainCont}>
+        <Card>
             <div className={classes.icon}>
                 <DynamicIcon></DynamicIcon>
             </div>
@@ -19,7 +20,7 @@ const PurposeCard = ({ title, icon, body }) => {
                 <div className={classes.title}>{title}</div>
                 <div className={classes.body}>{body}</div>
             </div>
-        </div>
+        </Card>
     )
 }
 

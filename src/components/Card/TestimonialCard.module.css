@@ -35,6 +35,15 @@
     font-family: var(--font-inter);
     font-weight: 700;
     font-size: 21.33px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.secondary {
+    font-size: 16px;
+    color: var(--tertiary);
 }
 
 .bodyContainer {
@@ -76,5 +85,9 @@
 
 .alignRight .titleContainer {
     right: 0;
+    flex-direction: row-reverse;
+}
+
+.alignRight .name {
     flex-direction: row-reverse;
 }
