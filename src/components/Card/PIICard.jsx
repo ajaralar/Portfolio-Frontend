@@ -1,5 +1,5 @@
 import classes from './PIICard.module.css'
-import Card from '../Card/Card'
+import Card from './Card'
 import TypedTextAnimation from '../TypedTextAnimation/TypedTextAnimation'
 
 const PIICard = ({ data }) => {

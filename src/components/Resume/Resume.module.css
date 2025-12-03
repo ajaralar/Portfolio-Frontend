@@ -1,9 +1,3 @@
-.mainContainer {
-    display: flex;
-    flex-direction: column;
-    padding: 60px;
-}
-
 /* Header */
 .collectionHeader {
     display: flex;

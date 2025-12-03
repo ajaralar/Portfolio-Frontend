@@ -1,7 +1,7 @@
-import classes from './Resume.module.css'
-import ResumeItem from './ResumeItem'
-import ResumeHeader from './ResumeHeader'
-import Card from "../Card/Card"
+import classes from './ResumeCard.module.css'
+import ResumeItem from '../Resume/ResumeItem'
+import ResumeHeader from '../Resume/ResumeHeader'
+import Card from "./Card"
 
 const ResumeCard = ({ data }) => {
     return (

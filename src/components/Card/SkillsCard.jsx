@@ -1,5 +1,5 @@
 import classes from './SkillsCard.module.css'
-import Card from '../Card/Card'
+import Card from './Card'
 import ProgressBar from '../ProgressBar/ProgressBar'
 import IconCarousel from '../IconCarousel/IconCarousel'
 
