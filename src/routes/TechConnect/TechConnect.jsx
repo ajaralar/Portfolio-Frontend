@@ -1,10 +1,12 @@
 import { useLoaderData } from 'react-router-dom'
+import ConnectForm from '../../components/ConnectForm/ConnectForm'
+
 const TechConnect = () => {
     const data = useLoaderData()
+
     return (
         <>
-            <p>Hello from Connect page</p>
-            <p>Status {data.message}</p>
+            <ConnectForm></ConnectForm>
         </>
     )
 }
