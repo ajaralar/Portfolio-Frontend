@@ -1,3 +1,55 @@
-label {
+.connectForm {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.nameGroup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.connectForm label {
+    font-weight: bold;
     color: gray;
+    margin-bottom: 5px;
+}
+
+.connectForm input {
+    height: 50px;
+}
+
+.connectForm input[type="text"],
+.connectForm input[type="email"],
+.connectForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    font-family: var(--font-inter);
+    font-size: 15px;
+}
+
+.buttonGroup {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.connectForm button {
+    background-color: rgb(255, 80, 80);
+    color: var(--neutral-white);
+    font-weight: bold;
+    border: none;
+    height: 35px;
+    cursor: pointer;
+    width: 50%;
+}
+
+.connectForm button[type="submit"] {
+    background-color: rgb(6, 221, 95);
 }

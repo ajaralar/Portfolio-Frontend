@@ -1,6 +1,6 @@
 /* ToDo: 
 1. Add client-side validation (Zod)
-2. 
+2. Design
 */
 
 import { useState } from "react"
@@ -80,32 +80,37 @@ const ConnectForm = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className={classes.connectForm}>
             {status.message && (
                 <p className={status.type === 'success' ? classes.success : classes.error}>
                     {status.message}
                 </p>
             )}
+            <div className={classes.nameGroup}>
+                <div>
+                    <label htmlFor="fname">First Name:</label>
+                    <input
+                        type="text"
+                        name="fname"
+                        placeholder="e.g, Alexander"
+                        value={formData.fname}
+                        onChange={handleChange}
+                        required
+                        id="fname" />
+                </div>
 
-            <label htmlFor="fname">First Name:</label>
-            <input
-                type="text"
-                name="fname"
-                placeholder="e.g, Alexander"
-                value={formData.fname}
-                onChange={handleChange}
-                required
-                id="fname" />
-
-            <label htmlFor="lname">Last Name:</label>
-            <input
-                type="text"
-                name="lname"
-                placeholder="e.g, DeGreat"
-                value={formData.lname}
-                onChange={handleChange}
-                required
-                id="lname" />
+                <div>
+                    <label htmlFor="lname">Last Name:</label>
+                    <input
+                        type="text"
+                        name="lname"
+                        placeholder="e.g, DeGreat"
+                        value={formData.lname}
+                        onChange={handleChange}
+                        required
+                        id="lname" />
+                </div>
+            </div>
 
             <label htmlFor="email">Email:</label>
             <input
@@ -137,9 +142,15 @@ const ConnectForm = () => {
                 required
                 id="message" />
 
-            <button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-            </button>
+            <div className={classes.buttonGroup}>
+                <button type="submit" disabled={isSubmitting}>
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
+                <button disabled={isSubmitting}>
+                    Clear
+                </button>
+            </div>
+
         </form>
     )
 }

@@ -7,16 +7,19 @@ import ResumeCard from '../../components/Card/ResumeCard'
 const TechResume = () => {
     const data = useLoaderData()
     return (
-        <div className={classes.resumeContainer}>
-            <div className={classes.sectionOne}>
-                <PIICard data={data} />
-                <SkillsCard data={data} />
-            </div>
+        <main>
+            <div className={classes.resumeContainer}>
+                <div className={classes.sectionOne}>
+                    <PIICard data={data} />
+                    <SkillsCard data={data} />
+                </div>
 
-            <div className={classes.sectionTwo}>
-                <ResumeCard data={data} />
+                <div className={classes.sectionTwo}>
+                    <ResumeCard data={data} />
+                </div>
             </div>
-        </div>
+        </main>
+
     )
 }
 

@@ -5,7 +5,7 @@ import Project from '../../components/Project/Project'
 const TechProjects = () => {
     const data = useLoaderData()
     return (
-        <>
+        <main>
             <Section
                 title={data.sectionTitle}
                 body={data.sectionBody}
@@ -14,7 +14,7 @@ const TechProjects = () => {
             {data.projects.map((projectData, index) => (
                 <Project data={projectData} index={index} key={index} />
             ))}
-        </>
+        </main>
     )
 }
 
