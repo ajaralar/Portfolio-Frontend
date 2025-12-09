@@ -8,7 +8,8 @@ const TechConnect = () => {
     return (
         <main>
             <div className={classes.formSection}>
-                <ConnectForm></ConnectForm>
+                <p>SHOOT ME A MESSAGE</p>
+                <ConnectForm />
             </div>
         </main>
     )

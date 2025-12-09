@@ -1,7 +1,15 @@
 .formSection {
     display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
+}
+
+.formSection p {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 3.95vw;
+    font-weight: 700;
 }
