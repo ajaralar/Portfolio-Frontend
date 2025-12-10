@@ -13,8 +13,8 @@ const TechFooter = ({ footerData }) => {
 
           <div className={classes.containerOne}>
             <p className={classes.title}>INQUIRIES? <span className={classes.titleSpan}>GET IN TOUCH</span></p>
-            <p className={classes.details}>{footerData.email}</p>
-            <p className={classes.details}>{footerData.phone}</p>
+            <p className={`${classes.details} ${classes.emailDetail}`}>{footerData.email}</p>
+            <p className={`${classes.details} ${classes.phoneDetail}`}>{footerData.phone}</p>
           </div>
 
           <div className={classes.containerTwo}>
