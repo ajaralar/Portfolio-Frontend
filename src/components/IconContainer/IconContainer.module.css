@@ -5,9 +5,9 @@
 
     position: fixed;
     top: 20px;
-    right: 0;
-    width: 59px;
-    height: 59px;
+    right: -120px;
+    width: clamp(20px, 7.86vw, 59px);
+    aspect-ratio: 1;
     z-index: 1000;
 
     opacity: 0;
@@ -19,5 +19,15 @@
 .visible {
     opacity: 1;
     pointer-events: auto;
-    transform: translateX(-108px);
+    transform: translateX(-150px);
+}
+
+@media (min-width: 1200px) {
+    .iconContainer {
+        right: 0;
+    }
+
+    .visible {
+        transform: translateX(-100px);
+    }
 }

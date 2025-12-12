@@ -1,12 +1,18 @@
 header {
-  padding: 20px 102px;
+  padding: 20px 40px;
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 12px;
 }
 
 .text {
   font-weight: 700;
-  font-size: 49px;
+  font-size: clamp(25px, 6.53vw, 49px);
   color: var(--primary);
+}
+
+@media (min-width:1200px) {
+  header {
+    padding: 20px 102px;
+  }
 }
