@@ -1,27 +1,29 @@
 .connectForm {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    align-self: center;
+    justify-self: center;
+    width: 75%;
 }
 
 .nameGroup {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 15px;
 }
 
 .connectForm label {
-    font-weight: bold;
+    font-weight: 700;
     color: gray;
     margin-bottom: 5px;
+    font-size: clamp(13px, 1.25vw, 15px);
 }
 
 .connectForm input {
-    height: 50px;
+    height: 38px;
 }
 
-.connectForm input[type="text"],
-.connectForm input[type="email"],
+.connectForm input,
 .connectForm textarea {
     width: 100%;
     padding: 10px;
@@ -33,6 +35,12 @@
     font-size: 15px;
 }
 
+.connectForm input::placeholder,
+.connectForm textarea::placeholder {
+    font-size: 12.2px;
+}
+
+
 .buttonGroup {
     display: flex;
     width: 100%;
@@ -41,15 +49,42 @@
 }
 
 .connectForm button {
-    background-color: rgb(255, 80, 80);
-    color: var(--neutral-white);
+    background-color: var(--neutral-white);
+    border: 1px solid #ccc;
+    color: var(--neutral-black);
     font-weight: bold;
-    border: none;
-    height: 35px;
+    height: 45px;
     cursor: pointer;
     width: 50%;
 }
 
 .connectForm button[type="submit"] {
-    background-color: rgb(6, 221, 95);
+    border: none;
+    background-color: var(--primary);
+    color: var(--neutral-white);
+}
+
+@media (min-width: 750px) {
+    .connectForm {
+        width: 65%;
+    }
+
+    .connectForm input {
+        height: 50px;
+    }
+
+    .connectForm input::placeholder,
+    .connectForm textarea::placeholder {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .connectForm {
+        width: 48%;
+    }
+
+    .nameGroup {
+        grid-template-columns: 1fr 1fr;
+    }
 }

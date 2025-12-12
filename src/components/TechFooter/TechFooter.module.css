@@ -38,13 +38,13 @@ footer {
     flex-direction: column;
 
     font-weight: 700;
-    font-size: clamp(50px, 14vw, 82px);
+    font-size: clamp(50px, 14vw, 130px);
     line-height: 98.8%;
     letter-spacing: -4px;
 }
 
 .titleSpan {
-    font-size: clamp(39px, 11vw, 65px);
+    font-size: clamp(39px, 11vw, 103px);
     margin-top: -15px;
 }
 
@@ -65,7 +65,7 @@ footer {
     display: flex;
     flex-direction: column;
 
-    width: 55%;
+    width: 68%;
     align-self: center;
 
     gap: 13px;
@@ -101,20 +101,6 @@ footer {
 .link:last-child {
     border-right: none;
     padding-right: 0;
-}
-
-@media (min-width:768px) {
-    .title {
-        font-size: 130px;
-    }
-
-    .titleSpan {
-        font-size: 103px;
-    }
-
-    .containerTwo {
-        width: 650px;
-    }
 }
 
 @media (min-width: 1200px) {

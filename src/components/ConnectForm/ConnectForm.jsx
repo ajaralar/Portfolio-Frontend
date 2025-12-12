@@ -1,8 +1,3 @@
-/* ToDo: 
-1. Add client-side validation (Zod)
-2. Design
-*/
-
 import { useState } from "react"
 import classes from './ConnectForm.module.css'
 
