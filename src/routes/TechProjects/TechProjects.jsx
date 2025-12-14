@@ -8,8 +8,7 @@ const TechProjects = () => {
         <main>
             <Section
                 title={data.sectionTitle}
-                body={data.sectionBody}
-                width={900} />
+                body={data.sectionBody} />
 
             {data.projects.map((projectData, index) => (
                 <Project data={projectData} index={index} key={index} />

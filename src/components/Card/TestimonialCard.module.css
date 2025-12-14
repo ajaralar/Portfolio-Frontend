@@ -4,13 +4,13 @@
     flex-direction: column;
     color: var(--neutral-white);
     padding-left: 10px;
-    width: 584px;
+    width: 100%;
     cursor: pointer;
 }
 
 .titleContainer {
     position: absolute;
-    top: -70px;
+    top: calc(-1 * clamp(35px, 6.33vw, 70px));
 
     display: flex;
     gap: 9px;
@@ -23,8 +23,8 @@
     background-color: var(--primary);
     border-radius: 10px;
     padding: 10px;
-    width: 88px;
-    height: 88px;
+    width: clamp(60px, 7.33vw, 88px);
+    aspect-ratio: 1;
 
     box-shadow:
         0 3px 6px 0 rgba(0, 0, 0, 0.401),
@@ -34,16 +34,22 @@
 .name {
     font-family: var(--font-inter);
     font-weight: 700;
-    font-size: 21.33px;
 
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
+.name {
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+    font-size: 13px;
+}
+
 .secondary {
-    font-size: 16px;
     color: var(--tertiary);
+    font-size: 9px;
 }
 
 .bodyContainer {
@@ -53,9 +59,9 @@
 }
 
 .body {
-    padding-top: 25px;
+    padding-top: 30px;
     font-family: var(--font-inter);
-    font-size: 17.07px;
+    font-size: clamp(12px, 1.40vw, 17px);
 }
 
 .readMore {
@@ -67,27 +73,68 @@
     justify-content: flex-start;
 
     font-family: var(--font-inter);
-    font-size: 17.07px;
+    font-size: clamp(14px, 1.40vw, 17px);
     color: rgb(0, 170, 255);
 
     bottom: 0;
     background-image: linear-gradient(0, var(--primary), rgba(0, 255, 255, 0))
 }
 
-.alignRight .body {
-    text-align: end;
+
+@media (min-width:720px) {
+    .titleContainer {
+        top: calc(-1 * clamp(40px, 6.33vw, 70px));
+    }
+
+    .image {
+        width: clamp(60px, 7.33vw, 88px);
+    }
+
+    .name {
+        gap: 10px;
+        flex-direction: row;
+        font-size: clamp(16px, 1.75vw, 21px);
+        align-items: center;
+    }
+
+    .secondary {
+        font-size: clamp(13px, 1.33vw, 16px);
+    }
+
+    .body {
+        font-size: clamp(14px, 1.40vw, 17px);
+    }
+
+    .readMore {
+        font-size: clamp(14px, 1.40vw, 17px);
+    }
+
+    .alignRight .body {
+        text-align: end;
+    }
+
+    .alignRight .readMore {
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .alignRight .titleContainer {
+        right: 0;
+        flex-direction: row-reverse;
+    }
+
+    .alignRight .name {
+        flex-direction: row-reverse;
+    }
 }
 
-.alignRight .readMore {
-    align-items: flex-end;
-    justify-content: flex-end;
-}
+@media (min-width: 1200px) {
+    .mainCont {
+        width: 800px;
+    }
 
-.alignRight .titleContainer {
-    right: 0;
-    flex-direction: row-reverse;
-}
-
-.alignRight .name {
-    flex-direction: row-reverse;
+    .image {
+        width: 88px;
+        height: 88px;
+    }
 }

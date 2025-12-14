@@ -10,7 +10,8 @@
     display: flex;
     flex-direction: column;
     padding-top: 53px;
-    gap: 37px;
+    gap: 65px;
+    margin-top: 15px;
 }
 
 @media (min-width:1200px) {

@@ -19,9 +19,8 @@ const TestimonialCard = ({ name, position, body, imageSrc, index = null }) => {
     }
 
     useLayoutEffect(() => {
-        if (contentRef.current) {
-            setContentHeight(contentRef.current.scrollHeight)
-        }
+        setContentHeight(contentRef.current.scrollHeight)
+
     }, [body])
 
     return (
@@ -37,8 +36,8 @@ const TestimonialCard = ({ name, position, body, imageSrc, index = null }) => {
                 </div>
 
                 <div className={classes.bodyContainer} style={containerStyle}>
-                    <div ref={contentRef} className={classes.bodyContent}>
-                        <div className={classes.body}>{body}</div>
+                    <div className={classes.bodyContent}>
+                        <div ref={contentRef} className={classes.body}>{body}</div>
                         <div className={classes.readMore} >
                             {readMoreText}
                         </div>
