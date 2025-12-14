@@ -1,8 +1,9 @@
 .purpCardContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 22px;
+    margin-top: 15px;
 }
 
 .testCardContainer {
@@ -10,4 +11,10 @@
     flex-direction: column;
     padding-top: 53px;
     gap: 37px;
+}
+
+@media (min-width:1200px) {
+    .purpCardContainer {
+        grid-template-columns: 1fr 1fr;
+    }
 }
