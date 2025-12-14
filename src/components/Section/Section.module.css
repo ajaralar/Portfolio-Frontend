@@ -1,20 +1,26 @@
 .section {
     display: flex;
     flex-direction: column;
+    width: 50%;
 
     margin: 100px auto 0 auto;
-    /* width: 956px; */
 }
 
 .title {
     text-align: center;
-    font-size: 87px;
+    font-size: clamp(29px, 4.53vw, 87px);
     color: var(--neutral-black);
 }
 
 .body {
     text-align: center;
-    font-size: 20px;
+    font-size: clamp(13px, 1.4vw, 20px);
     margin-top: 20px;
     color: var(--neutral-black);
+}
+
+@media (max-width: 750px) {
+    .section {
+        width: 80%;
+    }
 }
