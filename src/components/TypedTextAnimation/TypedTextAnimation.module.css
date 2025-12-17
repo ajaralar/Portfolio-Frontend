@@ -1,4 +1,8 @@
 .typedText {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: fit-content;
     padding-right: 2px;
     border-right: 1px solid;
     animation: border-blink 1s infinite;

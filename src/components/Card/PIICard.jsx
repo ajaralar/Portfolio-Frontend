@@ -1,17 +1,38 @@
 import classes from './PIICard.module.css'
 import Card from './Card'
 import TypedTextAnimation from '../TypedTextAnimation/TypedTextAnimation'
+import { useEffect, useState } from 'react';
 
 const PIICard = ({ data }) => {
+    const [cardSize, setCardSize] = useState(100)
+
+    useEffect(() => {
+        const handleResize = () => {
+            const width = window.innerWidth
+
+            if (width < 750) {
+                setCardSize(100)
+            } else if (width < 1200) {
+                setCardSize(35)
+            } else {
+                setCardSize(100)
+            }
+        };
+
+        handleResize()
+        window.addEventListener('resize', handleResize)
+
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
+
     return (
-        <Card fullSize={true}>
+        <Card size={cardSize}>
             <div className={classes.piiCard}>
                 <div className={classes.pii}>
                     <div className={classes.image}>
                         {/* <img src="" alt="" /> */}
                     </div>
-                    <p>{data.name}</p>
-                    <TypedTextAnimation strings={data.work} />
+                    <p>{data.name}<TypedTextAnimation strings={data.work} /></p>
                 </div>
 
                 <div className={classes.list}>
@@ -28,7 +49,6 @@ const PIICard = ({ data }) => {
                     <p>Age:</p>
                     <p>{data.age}</p>
                 </div>
-
             </div>
         </Card>
     )

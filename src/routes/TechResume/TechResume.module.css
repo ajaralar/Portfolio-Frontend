@@ -1,24 +1,48 @@
 .resumeContainer {
     display: flex;
+    flex-direction: column;
     position: relative;
+    align-items: center;
+    justify-content: center;
+
     width: 100vw;
     margin: 82px 0;
-    padding: 0 102px;
     gap: 20px;
 }
 
 .sectionOne {
-    position: sticky;
-    top: 0px;
+    position: unset;
     display: flex;
     flex-direction: column;
     padding-top: 20px;
-    width: 20%;
-    height: fit-content;
+    width: 90%;
     gap: 24px;
 }
 
 .sectionTwo {
     padding-top: 20px;
-    width: 80%;
+    width: 90%;
+}
+
+@media (min-width:750px) {
+    .sectionOne {
+        flex-direction: unset;
+    }
+
+}
+
+@media (min-width:1200px) {
+    .resumeContainer {
+        align-items: unset;
+        flex-direction: row;
+    }
+
+    .sectionOne {
+        width: 20%;
+        flex-direction: column;
+    }
+
+    .sectionTwo {
+        width: 70%;
+    }
 }
