@@ -1,5 +1,11 @@
 .mainContainer {
     display: flex;
     flex-direction: column;
-    padding: 60px;
+    padding: unset;
+}
+
+@media (min-width:1200px) {
+    .mainContainer {
+        padding: 60px;
+    }
 }

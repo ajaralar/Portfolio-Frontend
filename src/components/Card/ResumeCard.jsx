@@ -5,7 +5,7 @@ import Card from "./Card"
 
 const ResumeCard = ({ data }) => {
     return (
-        <Card>
+        <Card fullSize={true}>
             <div className={classes.mainContainer}>
                 {data.collections.map((collection, index) => {
                     return (
