@@ -6,8 +6,8 @@ const Menu = ({ isVisible, onClose }) => {
         { to: '/tech', label: 'Home' },
         { to: '/tech/about', label: 'About' },
         { to: '/tech/resume', label: 'Resume' },
-        { to: '/tech/projects', label: 'Projects' },
         { to: '/tech/connect', label: 'Connect' },
+        { to: '/tech/projects', label: 'Projects' }
     ];
 
     const menuClass = `${classes.menuContainer} ${isVisible ? classes.visible : ''}`
