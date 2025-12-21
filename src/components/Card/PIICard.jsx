@@ -32,7 +32,10 @@ const PIICard = ({ data }) => {
                     <div className={classes.image}>
                         {/* <img src="" alt="" /> */}
                     </div>
-                    <p>{data.name}<TypedTextAnimation strings={data.work} /></p>
+                    <div className={classes.container}>
+                        <p>{data.name}</p>
+                        <TypedTextAnimation strings={data.work} />
+                    </div>
                 </div>
 
                 <div className={classes.list}>

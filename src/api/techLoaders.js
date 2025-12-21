@@ -1,5 +1,18 @@
 const BACK_DOMAIN = import.meta.env.VITE_BACK_DOMAIN;
 
+export const homeLoader = async () => {
+    try {
+        const response = await fetch(`${BACK_DOMAIN}/tech/`)
+        if (!response.ok) {
+            throw new Response('Failed to fetch Home data', { status: response.status })
+        }
+        return response.json()
+    } catch (error) {
+        console.error('Home Loader Error', error);
+        throw error
+    }
+}
+
 export const aboutLoader = async () => {
     try {
         const response = await fetch(`${BACK_DOMAIN}/tech/about`)

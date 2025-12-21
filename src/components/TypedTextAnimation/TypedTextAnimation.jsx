@@ -1,7 +1,7 @@
 import classes from './TypedTextAnimation.module.css'
 import { useEffect, useMemo, useState } from 'react'
 
-const TypedTextAnimation = ({ strings }) => {
+const TypedTextAnimation = ({ strings, className }) => {
     const words = useMemo(() => strings || [], [strings])
 
     const [isTyping, setIsTyping] = useState(true)
@@ -53,7 +53,7 @@ const TypedTextAnimation = ({ strings }) => {
     }, [words, currentText, isTyping, wordIndex])
 
     return (
-        <div className={classes.typedText}>
+        <div className={`${classes.typedText} ${className}`}>
             <p>{currentText}</p>
         </div>
     )
