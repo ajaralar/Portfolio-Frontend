@@ -12,15 +12,46 @@ import App from './routes/App.jsx'
 import './styles/global.css'
 
 const router = createBrowserRouter([
-  { path: '/', element: <App /> },
   {
-    path: '/tech', element: <TechLayout />, loader: footerLoader, children: [
-      { index: true, loader: homeLoader, element: <TechHome /> },
-      { path: 'about', loader: aboutLoader, element: <TechAbout /> },
-      { path: 'resume', loader: resumeLoader, element: <TechResume /> },
-      { path: 'connect', loader: connectLoader, element: <TechConnect /> },
-      { path: 'projects', loader: projectsLoader, element: <TechProjects /> }
+    path: '/',
+    element: <App />
+  },
+
+  {
+    path: '/tech',
+    element: <TechLayout />,
+    loader: footerLoader,
+    children: [
+      {
+        index: true,
+        loader: homeLoader,
+        element: <TechHome />
+      },
+      {
+        path: 'about',
+        loader: aboutLoader,
+        element: <TechAbout />
+      },
+      {
+        path: 'resume',
+        loader: resumeLoader,
+        element: <TechResume />
+      },
+      {
+        path: 'connect',
+        loader: connectLoader,
+        element: <TechConnect />
+      },
+      {
+        path: 'projects',
+        loader: projectsLoader,
+        element: <TechProjects />
+      }
     ]
+  },
+
+  {
+    path: '/music'
   }
 ])
 
