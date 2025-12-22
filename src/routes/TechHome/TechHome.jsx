@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom"
+import { useLoaderData, Link } from "react-router-dom"
 import classes from './TechHome.module.css'
 import TypedTextAnimation from '../../components/TypedTextAnimation/TypedTextAnimation'
 
@@ -20,8 +20,9 @@ const TechHome = () => {
                 </div>
 
                 <p className={classes.body}>{data.body}</p>
-
-                <a href="tech/about" className={classes.button}>More about me</a>
+                <Link to='/tech/about' className={classes.button}>
+                    More about me
+                </Link>
             </div>
         </main>
     )
