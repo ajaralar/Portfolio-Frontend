@@ -1,0 +1,56 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+.title,
+.card {
+    color: var(--primary);
+}
+
+.portalGrid {
+    display: flex;
+    gap: 25px;
+}
+
+.card {
+    position: relative;
+    height: 400px;
+    width: 300px;
+
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
+}
+
+.overlay {
+    display: flex;
+    border-radius: 15px;
+    flex-direction: column;
+    height: inherit;
+    justify-content: flex-end;
+
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 2%, transparent 40%);
+
+    padding: 30px;
+    color: white;
+}
+
+/* Add different background images or colors for distinction */
+/* .techCard {
+    background: url('/path-to-tech-bg.jpg') center/cover;
+    background-color: #1a1a1a;
+}
+
+.musicCard {
+    background: url('/path-to-music-bg.jpg') center/cover;
+    background-color: #1a1a1a;
+} */

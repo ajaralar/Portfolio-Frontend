@@ -8,13 +8,13 @@ import TechAbout from './routes/TechAbout/TechAbout.jsx'
 import TechResume from './routes/TechResume/TechResume.jsx'
 import TechConnect from './routes/TechConnect/TechConnect.jsx'
 import TechProjects from './routes/TechProjects/TechProjects.jsx'
-import App from './routes/App.jsx'
+import HomeLayout from './routes/HomeLayout/HomeLayout.jsx'
 import './styles/global.css'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />
+    element: <HomeLayout />
   },
 
   {
