@@ -23,4 +23,3 @@ export const techResumeLoader = () => fetchData('/tech/resume', 'Failed to fetch
 export const techConnectLoader = () => fetchData('/tech/connect', 'Failed to fetch Tech Connect data');
 export const techProjectsLoader = () => fetchData('/tech/projects', 'Failed to fetch Tech Projects data');
 export const techFooterLoader = () => fetchData('/tech/footer', 'Failed to fetch Tech Footer data');
-export const homeLoader = () => fetchData('/', 'Failed to fetch Home data')
