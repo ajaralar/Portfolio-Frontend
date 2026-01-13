@@ -17,9 +17,10 @@ const fetchData = async (endpoint, errorMessage) => {
     }
 }
 
-export const homeLoader = () => fetchData('/tech/', 'Failed to fetch Home data');
-export const aboutLoader = () => fetchData('/tech/about', 'Failed to fetch About data');
-export const resumeLoader = () => fetchData('/tech/resume', 'Failed to fetch Resume data');
-export const connectLoader = () => fetchData('/tech/connect', 'Failed to fetch Connect data');
-export const projectsLoader = () => fetchData('/tech/projects', 'Failed to fetch Projects data');
-export const footerLoader = () => fetchData('/tech/footer', 'Failed to fetch Footer data');
+export const techHomeLoader = () => fetchData('/tech/', 'Failed to fetch Tech Home data');
+export const techAboutLoader = () => fetchData('/tech/about', 'Failed to fetch Tech About data');
+export const techResumeLoader = () => fetchData('/tech/resume', 'Failed to fetch Tech Resume data');
+export const techConnectLoader = () => fetchData('/tech/connect', 'Failed to fetch Tech Connect data');
+export const techProjectsLoader = () => fetchData('/tech/projects', 'Failed to fetch Tech Projects data');
+export const techFooterLoader = () => fetchData('/tech/footer', 'Failed to fetch Tech Footer data');
+export const homeLoader = () => fetchData('/', 'Failed to fetch Home data')
